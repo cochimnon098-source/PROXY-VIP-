@@ -1,1 +1,618 @@
+<h2>AimBody</h2>
+<p>Giá: 250.000đ</p>
+<button>Mua ngay</button>
+</div>
 
+</body>
+</html>
+<div class="card">
+  <h2>Headlock</h2>
+  <p>Giá: 100.000đ</p>
+  <button>Mua ngay</button>
+</div>
+<h2>Thanh toán</h2>
+
+<p>Ngân hàng: Zalo Payy</p>
+<p>Số tài khoản: 0984112107</p>
+<p>Chủ tài khoản: Nguyễn PHƯƠNG THẢO</p>
+
+<p>Hoặc quét mã QR:</p>
+<img src="link_ảnh_qr_của_bạn" width="200" alt="QR thanh toán">
+<a href="https://zalo.me/0383439096" target="_blank" class="btn-zalo">
+  <!-- Biểu tượng tin nhắn (có thể thay bằng icon Zalo) -->
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+  </svg>
+  Nhắn Zalo: 0396929922
+</a>
+<div class="support-box">
+  <h3>Cần hỗ trợ hoặc mua số lượng lớn?</h3>
+  <p>Sau khi ấn mua xong, giao dịch thành công vui lòng nhắn tin trực tiếp qua Zalo để nhận key và hỗ trợ nhanh nhất.</p>
+  
+  <a href="https://zalo.me/0396929922" target="_blank" class="btn-zalo">
+    💬 Nhắn Zalo: 0396929922
+  </a>
+</div>
+ <div class="success-container" style="text-align: center; padding: 40px; font-family: sans-serif;">
+  <div style="font-size: 50px; color: #22c55e; margin-bottom: 20px;">✔</div>
+  <h2>Đặt hàng / Giao dịch thành công!</h2>
+  <p style="font-size: 16px; color: #333; margin: 20px 0;">
+    Cảm ơn bạn đã mua hàng. Vui lòng nhắn tin qua Zalo kèm mã giao dịch để nhận key/hỗ trợ nhanh nhất.
+  </p>
+  
+  <!-- Nút bấm dẫn thẳng đến Zalo kèm số điện thoại -->
+  <a href="https://zalo.me/0396929922" target="_blank" style="display: inline-block; background-color: #2563eb; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+    Nhắn Zalo: 0396929922
+  </a>
+</div>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Toán Gói Dịch Vụ</title>
+  <style>
+    <!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán QR Code</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        /* Modal Overlay */
+        .modal-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 420px;
+            padding: 24px 20px;
+            color: #ffffff;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Header Title */
+        .title {
+            color: #38bdf8;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        /* Countdown Timer */
+        .timer-box {
+            border: 1px solid #991b1b;
+            background-color: rgba(153, 27, 27, 0.1);
+            color: #f87171;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* QR Container */
+        .qr-container {
+            background-color: #ffffff;
+            padding: 16px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .qr-container img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Payment Details Box */
+        .details-box {
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px dashed #334155;
+            border-radius: 10px;
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .details-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .label {
+            color: #94a3b8;
+        }
+
+        .value {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+
+        .value-green {
+            color: #4ade80;
+            font-weight: 700;
+        }
+
+        /* Highlight note box */
+        .note-tag {
+            background-color: rgba(34, 197, 94, 0.15);
+            border: 1px dashed #22c55e;
+            color: #4ade80;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        /* Action Buttons */
+        .btn-close {
+            width: 100%;
+            background-color: #334155;
+            color: #e2e8f0;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-close:hover {
+            background-color: #475569;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="modal-card">
+        <h2 class="title">Thanh Toán: Gói 1 Tuần</h2>
+        <p class="subtitle">Quét mã QR để thanh toán tự động:</p>
+
+        <!-- Đồng hồ đếm ngược -->
+        <div class="timer-box" id="timer">03:00</div>
+
+        <!-- Khung QR Code ảnh 2 -->
+        <div class="qr-container">
+            <img src="https://i.ibb.co/3ykG2xH/zalopay-qr.jpg" alt="Mã QR Thanh Toán">
+        </div>
+
+        <!-- Chi tiết thông tin chuyển khoản -->
+        <div class="details-box">
+            <div class="details-row">
+                <span class="label">Ngân hàng:</span>
+                <span class="value">ZaloPay / Ngân hàng liên kết</span>
+            </div>
+            <div class="details-row">
+                <span class="label">Chủ TK:</span>
+                <span class="value">NGUYEN PHUONG THAO</span>
+            </div>
+            <div class="details-row">
+                <span class="label">Số tiền:</span>
+                <span class="value-green">60.000đ</span>
+            </div>
+            <div class="details-row" style="margin-top: 4px;">
+                <span class="label">Nội dung CK:</span>
+                <span class="note-tag">proxy 1 tuan</span>
+            </div>
+        </div>
+
+        <!-- Nút Hủy / Đóng -->
+        <button class="btn-close" onclick="alert('Đã đóng bảng thanh toán!')">Đóng / Hủy</button>
+    </div>
+
+    <script>
+        // JS Đếm ngược thời gian (3 phút)
+        let timeLeft = 180; // 180 giây = 3 phút
+        const timerElement = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+
+            // Thêm số 0 phía trước nếu < 10
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            timerElement.textContent = `${minutes}:${seconds}`;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timerElement.textContent = "MÃ ĐÃ HẾT HẠN";
+                timerElement.style.color = "#ef4444";
+            }
+            timeLeft--;
+        }, 1000);
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProxyVip - Hệ Thống Bán Key Proxy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0b1329;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Package Cards */
+        .card {
+            background-color: #172036;
+            border: 1px solid #232f4e;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .card-price {
+            font-size: 26px;
+            font-weight: 800;
+            color: #00a2ff;
+            margin-bottom: 18px;
+        }
+
+        .btn-buy {
+            width: 100%;
+            background-color: #0088cc;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-buy:hover {
+            background-color: #0099e6;
+        }
+
+        /* Support Box */
+        .support-card {
+            background-color: #172036;
+            border: 1px solid #232f4e;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .support-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .support-desc {
+            font-size: 13px;
+            color: #8f9bba;
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .btn-zalo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        /* Payment Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background-color: #131c31;
+            border: 1px solid #253354;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 380px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.6);
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: translateY(0);
+        }
+
+        .modal-title {
+            color: #38bdf8;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .modal-subtitle {
+            color: #94a3b8;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .timer-box {
+            border: 1px solid #7f1d1d;
+            background-color: rgba(127, 29, 29, 0.2);
+            color: #ef4444;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 6px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .qr-container {
+            background-color: #ffffff;
+            padding: 12px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .qr-container img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .details-box {
+            background-color: #0b1329;
+            border: 1px dashed #232f4e;
+            border-radius: 10px;
+            padding: 12px 14px;
+            text-align: left;
+            font-size: 13px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .details-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .label { color: #8f9bba; }
+        .value { color: #38bdf8; font-weight: 600; }
+        .value-green { color: #4ade80; font-weight: 700; }
+
+        .note-tag {
+            background-color: rgba(34, 197, 94, 0.15);
+            border: 1px dashed #22c55e;
+            color: #4ade80;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .btn-close {
+            width: 100%;
+            background-color: #334155;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Gói 1 Ngày -->
+        <div class="card">
+            <div class="card-title">Gói 1 Ngày</div>
+            <div class="card-price">30.000đ</div>
+            <button class="btn-buy" onclick="openPayment('Gói 1 Ngày', '30.000đ', 'proxy 1 ngay')">Mua Ngay</button>
+        </div>
+
+        <!-- Gói 1 Tuần -->
+        <div class="card">
+            <div class="card-title">Gói 1 Tuần</div>
+            <div class="card-price">60.000đ</div>
+            <button class="btn-buy" onclick="openPayment('Gói 1 Tuần', '60.000đ', 'proxy 1 tuan')">Mua Ngay</button>
+        </div>
+
+        <!-- Gói 1 Tháng -->
+        <div class="card">
+            <div class="card-title">Gói 1 Tháng</div>
+            <div class="card-price">120.000đ</div>
+            <button class="btn-buy" onclick="openPayment('Gói 1 Tháng', '120.000đ', 'proxy 1 thang')">Mua Ngay</button>
+        </div>
+
+        <!-- Gói 1 Năm -->
+        <div class="card">
+            <div class="card-title">Gói 1 Năm</div>
+            <div class="card-price">250.000đ</div>
+            <button class="btn-buy" onclick="openPayment('Gói 1 Năm', '250.000đ', 'proxy 1 nam')">Mua Ngay</button>
+        </div>
+
+        <!-- Khung Hỗ Trợ -->
+        <div class="support-card">
+            <div class="support-title">Cần hỗ trợ hoặc mua số lượng lớn?</div>
+            <div class="support-desc">Nhắn tin trực tiếp qua Zalo để nhận key và hỗ trợ nhanh nhất.</div>
+            <a href="https://zalo.me/0383439096" target="_blank" class="btn-zalo">
+                💬 Nhắn Zalo: 0383439096
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal Popup Thanh Toán -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal-card">
+            <h2 class="modal-title" id="modalTitle">Thanh Toán: Gói 1 Tuần</h2>
+            <p class="modal-subtitle">Quét mã QR để thanh toán tự động:</p>
+
+            <div class="timer-box" id="timer">03:00</div>
+
+            <div class="qr-container">
+                <img src="https://i.ibb.co/3ykG2xH/zalopay-qr.jpg" alt="Mã QR Thanh Toán">
+            </div>
+
+            <div class="details-box">
+                <div class="details-row">
+                    <span class="label">Ngân hàng:</span>
+                    <span class="value">ZaloPay / SĐT</span>
+                </div>
+                <div class="details-row">
+                    <span class="label">Chủ TK:</span>
+                    <span class="value">NGUYEN PHUONG THAO</span>
+                </div>
+                <div class="details-row">
+                    <span class="label">Số TK:</span>
+                    <span class="value">0984112107</span>
+                </div>
+                <div class="details-row">
+                    <span class="label">Số tiền:</span>
+                    <span class="value-green" id="modalPrice">60.000đ</span>
+                </div>
+                <div class="details-row" style="margin-top: 4px;">
+                    <span class="label">Nội dung CK:</span>
+                    <span class="note-tag" id="modalContent">proxy 1 tuan</span>
+                </div>
+            </div>
+
+            <button class="btn-close" onclick="closePayment()">Đóng / Hủy</button>
+        </div>
+    </div>
+
+    <script>
+        let countdown;
+        let timeLeft = 180; // 3 phút
+
+        function openPayment(packageName, price, content) {
+            // Cập nhật thông tin gói
+            document.getElementById('modalTitle').textContent = `Thanh Toán: ${packageName}`;
+            document.getElementById('modalPrice').textContent = price;
+            document.getElementById('modalContent').textContent = content;
+
+            // Hiển thị modal
+            document.getElementById('paymentModal').classList.add('active');
+
+            // Reset & Chạy đồng hồ đếm ngược
+            clearInterval(countdown);
+            timeLeft = 180;
+            startTimer();
+        }
+
+        function closePayment() {
+            document.getElementById('paymentModal').classList.remove('active');
+            clearInterval(countdown);
+        }
+
+        function startTimer() {
+            const timerElement = document.getElementById('timer');
+            
+            countdown = setInterval(() => {
+                let minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+
+                timerElement.textContent = `${minutes}:${seconds}`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    timerElement.textContent = "MÃ ĐÃ HẾT HẠN";
+                }
+                timeLeft--;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
